@@ -1,0 +1,4 @@
+[tools]
+just = "latest"
+powershell = "latest"
+prettier = "latest"
