@@ -55,11 +55,29 @@
     //
     "terminal.integrated.inheritEnv": false,
     "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+            "path": "pwsh"
+        }
+    },
 
     // theme
     //
-    "workbench.colorTheme": "React Color Theme",
-    "workbench.iconTheme": "eq-material-theme-icons-light",
+    "workbench.colorTheme": "Carbon React Color Theme - Pure",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 12.45,
+    "editor.letterSpacing": 0.16,
+    "editor.lineHeight": 1.5,
+    "terminal.integrated.fontSize": 12.45,
+    "editor.suggestFontSize": 16,
+    "editor.suggestLineHeight": 24,
+    "terminal.integrated.lineHeight": 1.1,
+
     "workbench.sideBar.location": "right",
     "workbench.tree.enableStickyScroll": false,
     "workbench.startupEditor": "none",
@@ -82,15 +100,12 @@
     "editor.stickyScroll.enabled": false,
     "editor.linkedEditing": true,
     "editor.formatOnSave": false,
-    "editor.fontLigatures": false,
-    "editor.fontSize": 16,
     "editor.minimap.maxColumn": 250,
     "editor.accessibilitySupport": "off",
     "editor.fontWeight": "400",
     "editor.inlineSuggest.suppressSuggestions": true,
     "editor.padding.top": 16,
     "editor.cursorBlinking": "solid",
-    "editor.lineHeight": 24,
     "editor.copyWithSyntaxHighlighting": false,
     "editor.emptySelectionClipboard": false,
     "editor.multiCursorModifier": "ctrlCmd",
@@ -99,6 +114,7 @@
     "editor.guides.indentation": false,
     "editor.snippetSuggestions": "none",
     "editor.detectIndentation": true,
+    "editor.cursorSmoothCaretAnimation": "off",
 
     "diffEditor.renderSideBySide": true,
     "diffEditor.ignoreTrimWhitespace": false,
@@ -146,12 +162,6 @@
     "editor.matchBrackets": "always",
     "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
 
-    // Typography
-    "editor.fontFamily": "Fira Code",
-    "editor.suggestFontSize": 16,
-    "editor.suggestLineHeight": 24,
-    "terminal.integrated.lineHeight": 1.1,
-    "terminal.integrated.fontSize": 16,
     "search.useIgnoreFiles": false,
     "search.exclude": {
         // Hide everything in /vendor, except the "laravel" and "livewire" folder.

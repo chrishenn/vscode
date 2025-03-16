@@ -1,9 +1,8 @@
 /* Code comment style */
 .mtk3 {
+    font-family: 'Fira Code', monospace !important;
+    font-style: italic !important;
     color: #008c7d !important;
-}
-*:not() {
-    border: none !important;
 }
 
 /* Code canvas top shadow */
@@ -20,9 +19,6 @@
 /* Side bar */
 .part.sidebar {
     box-shadow: 0px 0px 50px rgba(0, 0, 0, .25);
-}
-.part.sidebar.right > div > div > div:nth-child(1) {
-    display: none !important;
 }
 
 /* File Explorer Selected Item */
@@ -62,18 +58,6 @@
   font-family: Fira Code !important;
   font-size: 14px !important;
 }
-.monaco-workbench .codicon[class*=codicon-] {
-    opacity: 0 !important;
-}
-.explorer-folders-view .monaco-list-row {
-    padding-left: 20px !important;
-}
-.monaco-list.list_id_1 .monaco-tl-indent > .indent-guide.active {
-    border: none !important;
-}
-.monaco-list.list_id_1 .monaco-tl-indent > .indent-guide.active:hover {
-    border: none !important;
-}
 
 /* Sidebar top shadow */
 .monaco-scrollable-element>.shadow.top {
@@ -98,14 +82,14 @@
 /* Scroll Bar */
 .slider {
     position: absolute !important;
-    right: 5px !important;
-    width: 5px !important;
+    right: 1px !important;
+    width: 1px !important;
     background: #bc9abc !important;
     left: auto !important;
 }
 
 /* Tooltip box style */
-/* .monaco-editor-hover,
+.monaco-editor-hover,
 .monaco-hover {
     box-shadow: 0px 8px 32px rgba(0,0,0,.45) !important;
     background-image: linear-gradient(#3c3c50 0%, #2a2b38 100%) !important;
@@ -117,24 +101,19 @@
 .monaco-resizable-hover {
     border: none !important;
 }
-.monaco-hover > div, .monaco-editor-hover > div {
-    padding: 10px !important;
-    width: 600px !important;
-} */
-
 
 /* Project title's style at the top. */
-/* .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center>.window-title>.command-center .action-item.command-center-center {
+.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center>.window-title>.command-center .action-item.command-center-center {
     border: none !important;
     background: transparent !important;
-} */
+}
 
 /* Project Title */
-/* .titlebar-left {
+.titlebar-left {
     justify-content: flex-end !important;
     flex-grow: 0 !important;
     width: 75px !important;
-} */
+}
 
 /* Search Label */
 .search-label {
@@ -166,13 +145,10 @@
     transform: translateY(-50%) !important;
     top: 50% !important;
     box-shadow: 0px 8px 32px rgba(0, 0, 0, .35) !important;
-    /* border: 4px solid rgba(24, 135, 129, .35) !important; */
     padding: 10px 10px 18px 10px !important;
     background-image: linear-gradient(#3c3c50 0%, #2a2b38 100%) !important;
-    /* background: #3c3c50 !important; */
     backdrop-filter: blur(3px) !important;
     border-radius: 20px !important;
-    /* width: 50% !important; */
 }
 .quick-input-list, .quick-input-list .list_id_6 {
     min-height: 400px !important;
@@ -188,7 +164,6 @@
     border-radius: 12px !important;
     padding: 16px !important;
     border: none !important;
-    /* background-color: rgba(34, 34, 34, .40) !important; */
     font-family: "Fira Code" !important;
     font-size: 16px !important;
     margin-bottom: 16px !important;
@@ -213,9 +188,8 @@
 .editor-group-watermark {
     max-width: none !important;
 }
-
 .letterpress {
-    background-image: none;
+    background-image: url("") !important;
     background-repeat: no-repeat no-repeat !important;
     background-position: center center !important;
     background-size: contain !important;
