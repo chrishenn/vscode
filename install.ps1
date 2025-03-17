@@ -15,8 +15,10 @@ code --install-extension donjayamanne.githistory --force
 scoop bucket add nerd-fonts
 scoop install firacode
 
-git clone git@github.com:chrishenn/vscode.git
-cd vscode
+if (! (test-path /vscode)) {
+    git clone git@github.com:chrishenn/vscode.git
+}
+cd /vscode
 cp /vscode/settings.json "$HOME\scoop\apps\vscode\current\data\user-data\User\settings.json" -force
 cp /vscode/keybindings.json "$HOME\scoop\apps\vscode\current\data\user-data\User\keybindings.json" -force
 popd
