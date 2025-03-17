@@ -6,6 +6,7 @@ rm scoop.ps1
 
 scoop install vscode
 code --install-extension yathink3.carbon-react-color-theme --force
+code --install-extension pkief.material-icon-theme --force
 code --install-extension esbenp.prettier-vscode --force
 code --install-extension be5invis.vscode-custom-css --force
 code --install-extension apility.beautify-blade --force
