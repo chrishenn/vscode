@@ -2,61 +2,65 @@
 
 Custom themes for my vscode preferences
 
+One-liner to download and install (security note: read random scripts from the internet before running them)
+```powershell
+irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.ps1 | iex
+```
 
-## Todo 
+Manual steps, not handled by the script:
 
-Remove these manual steps
+vscode > palette > Reload Custom CSS and JS 
+restart vscode
+
+vscode > notification "your installation appears to be corrupt" > cog icon > don't show again
 
 $file = "$HOME\scoop\persist\vscode\data\extensions\isudox.vscode-jetbrains-keybindings-0.1.9\package.json"
 edit manually to find the ctrl+backtick setting in the extension file and disable
 
 selection > switch to alt-click for multi-cursor
 
+---
 
-## Installer Script
-$url = 'https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.ps1'
+# Manual Install
 
-Invoke-Expression ((New-Object System.Net.WebClient).DownloadString($url))
+## Settings, Keybindings
 
-
-
-iex "& {$(irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.ps1)}"
-
-
-## Settings
-
-The settings.json includes hardcoded paths into C:\vscode.
+The settings.json includes hardcoded paths into C:\vscode
 
 ```powershell
-$file = "$HOME\scoop\apps\vscode\current\data\user-data\User\settings.json"
-cp /vscode/settings.json $file -force
+cp /vscode/settings.json "$HOME\scoop\apps\vscode\current\data\user-data\User\settings.json" -force
+cp /vscode/keybindings.json "$HOME\scoop\apps\vscode\current\data\user-data\User\keybindings.json" -force
 ```
 
 
-## Keybindings
+## Deps 
 
-```powershell
-$file = "$HOME\scoop\apps\vscode\current\data\user-data\User\keybindings.json"
-cp /vscode/keybindings.json $file -force
-```
+### Fonts
 
-
-## To Install
-
-Font
-
-- Fira Code
+scoop bucket add nerd-fonts
+scoop install firacode
 
 
-Extensions
+### Code + Extensions
 
+scoop install vscode
+
+in the vscode prompt:
 ext install yathink3.carbon-react-color-theme
 ext install esbenp.prettier-vscode
 ext install be5invis.vscode-custom-css
 ext install apility.beautify-blade
 ext install isudox.vscode-jetbrains-keybindings
 
+alternatively, from shell:
+code --install-extension yathink3.carbon-react-color-theme --force
+code --install-extension esbenp.prettier-vscode --force
+code --install-extension be5invis.vscode-custom-css --force
+code --install-extension apility.beautify-blade --force
+code --install-extension isudox.vscode-jetbrains-keybindings --force
 
-## Credit
+
+
+# Credit
 
 Big thanks to https://github.com/glennraya/vscode-settings-json from whom I've heavily copy-pasted into this repo

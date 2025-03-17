@@ -1,10 +1,10 @@
 pushd /
 
-irm get.scoop.sh -outfile 'scoop.ps1'
-.\scoop.ps1 -RunAsAdmin | out-null
-rm scoop.ps1
+# irm get.scoop.sh -outfile 'scoop.ps1'
+# .\scoop.ps1 -RunAsAdmin | out-null
+# rm scoop.ps1
 
-# iex "& {$(irm get.scoop.sh)} -RunAsAdmin | out-null"
+iex "& {$(irm get.scoop.sh)} -RunAsAdmin | out-null"
 
 scoop install vscode
 code --install-extension yathink3.carbon-react-color-theme --force
