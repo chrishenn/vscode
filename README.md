@@ -17,7 +17,6 @@ Manual steps, not handled by the script:
 - vscode > palette > Reload Custom CSS and JS
   - restart vscode
 - vscode > notification "your installation appears to be corrupt" > cog icon > don't show again
-- vscode > palette > material icon theme > activate
 - selection > switch to alt-click for multi-cursor
 - code "$HOME\scoop\persist\vscode\data\extensions\isudox.vscode-jetbrains-keybindings-0.1.9\package.json"
   - find ctrl+` > delete hotkey

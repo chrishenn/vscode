@@ -237,7 +237,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[php]": {
-        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+        // "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
     },
     "editor.tokenColorCustomizations": {
         "textMateRules": [{
