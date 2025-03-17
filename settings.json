@@ -43,7 +43,7 @@
     "explorer.confirmDelete": false,
     "explorer.sortOrder": "filesFirst",
     "explorer.confirmPasteNative": false,
-    "workbench.tree.indent": 20,
+    "workbench.tree.indent": 40,
 
     // git
     //
@@ -54,6 +54,7 @@
     // terminal
     //
     "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
