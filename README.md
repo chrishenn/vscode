@@ -14,10 +14,18 @@ restart vscode
 
 vscode > notification "your installation appears to be corrupt" > cog icon > don't show again
 
-$file = "$HOME\scoop\persist\vscode\data\extensions\isudox.vscode-jetbrains-keybindings-0.1.9\package.json"
-edit manually to find the ctrl+backtick setting in the extension file and disable
-
 selection > switch to alt-click for multi-cursor
+
+code "$HOME\scoop\persist\vscode\data\extensions\isudox.vscode-jetbrains-keybindings-0.1.9\package.json"
+find ctrl+` > delete hotkey
+find ctrl+k > delete hotkey
+vscode > palette > reload window
+
+
+Uninstaller
+```powershell
+irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/uninstall.ps1 | iex
+```
 
 ---
 
