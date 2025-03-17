@@ -3,9 +3,9 @@ code --uninstall-extension esbenp.prettier-vscode --force
 code --uninstall-extension be5invis.vscode-custom-css --force
 code --uninstall-extension apility.beautify-blade --force
 code --uninstall-extension isudox.vscode-jetbrains-keybindings --force
-scoop uninstall vscode
+scoop uninstall vscode -p
 
-scoop uninstall firacode
+scoop uninstall firacode -p
 scoop bucket rm nerd-fonts
 
-rm -r -force /vscode/settings.json "$HOME\scoop\apps\vscode\current\data\user-data\User\settings.json" -force
+rm -r -force /vscode/
