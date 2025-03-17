@@ -1,5 +1,7 @@
 # VSCode Theming
 
+
+
 ## Settings
 
 The settings.json includes hardcoded paths into C:\vscode.
@@ -14,15 +16,24 @@ $file = "$HOME\scoop\apps\vscode\current\data\user-data\User\settings.json"
 cp /vscode/settings.json $file -force
 ```
 
+
+
 ## Keybindings
 
 - selection > switch to alt-click for multi-cursor
-- find the jetbrains shortcut to "show color theme picker" and disable it: it conflicts with ctrl+backtick to toggle terminal
+
+Find this ctrl+backtick setting in the extension package.json file and disable
+
 
 ```powershell
+$file = "$HOME\scoop\persist\vscode\data\extensions\isudox.vscode-jetbrains-keybindings-0.1.9\package.json"
+# edit manually
+
 $file = "$HOME\scoop\apps\vscode\current\data\user-data\User\keybindings.json"
 cp /vscode/keybindings.json $file -force
 ```
+
+
 
 ## To Install
 
