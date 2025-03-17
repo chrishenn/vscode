@@ -1,4 +1,4 @@
-iex "& {$(irm get.scoop.sh)} -RunAsAdmin" | out-null
+iex "& {$(irm get.scoop.sh)} -RunAsAdmin -erroraction 'silentlycontinue'" | out-null
 
 scoop install vscode
 code --install-extension yathink3.carbon-react-color-theme --force

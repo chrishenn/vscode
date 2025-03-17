@@ -18,6 +18,8 @@ $url = 'https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/insta
 
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString($url))
 
+
+
 iex "& {$(irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.ps1)}"
 
 
