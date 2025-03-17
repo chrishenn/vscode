@@ -8,7 +8,7 @@ Custom themes for my vscode preferences
 Remove these manual steps
 
 $file = "$HOME\scoop\persist\vscode\data\extensions\isudox.vscode-jetbrains-keybindings-0.1.9\package.json"
-# edit manually to find the ctrl+backtick setting in the extension file and disable
+edit manually to find the ctrl+backtick setting in the extension file and disable
 
 selection > switch to alt-click for multi-cursor
 
