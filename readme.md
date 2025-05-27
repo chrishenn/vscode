@@ -2,10 +2,10 @@
 
 Scripts to install my vscode prefs on {windows, linux}
 
-<p style="text-align: center;">
+<p align="center">
   <div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/img.png" alt="window" width="350">
-    <img src="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/img1.png" alt="blur" width="350">
+    <img src="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/img.png" alt="window" width="500">
+    <img src="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/img1.png" alt="blur" width="500">
   </div>
 </p>
 
