@@ -8,8 +8,12 @@ Custom settings for my vscode prefs
 
 security note: you should read scripts before running them
 
-```powershell
+```
+# windows, powershell
 irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.ps1 | iex
+
+# linux/ubuntu, bash
+curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.sh | sh
 ```
 
 Manual steps, not handled by the script:
@@ -28,8 +32,12 @@ Manual steps, not handled by the script:
 # Uninstall
 
 
-```powershell
+```
+# windows, powershell
 irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/uninstall.ps1 | iex
+
+# linux/ubuntu, bash
+curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/uninstall.sh | sh
 ```
 
 
