@@ -1,15 +1,18 @@
 # VSCode Settings
 
-Custom settings for my vscode prefs
+Scripts to install my vscode prefs on {windows, linux}
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/img.png" alt="screenshot">
+</p>
 
 
 # Install
 
-Note: You should read scripts before running them
-Note: These scripts are for my preferred setup and may have side-effects or incompatibilities that may not work on 
+- Note: You should read scripts before running them
+- Note: These scripts are for my preferred setup and may have side-effects or incompatibilities that may not work on 
 your system.
-Note: The 'uninstall' scripts below are not comprehensive, and will leave clutter behind that were installed by the 
+- Note: The 'uninstall' scripts below are not comprehensive, and will leave clutter behind that were installed by the 
 'install' scripts
 
 
@@ -21,7 +24,7 @@ irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.p
 curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.sh | bash
 ```
 
-Manual steps, not handled by the script:
+Required manual steps, not automated by the scripts yet:
 
 - vscode > palette > Reload Custom CSS and JS
   - restart vscode
@@ -36,7 +39,7 @@ Manual steps, not handled by the script:
   - edits
     - find ctrl+` > delete hotkey def
     - find ctrl+k > delete hotkey def
-- vscode > palette > reload window
+- restart vscode
 
 
 
