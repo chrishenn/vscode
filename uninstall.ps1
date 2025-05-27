@@ -6,4 +6,3 @@ code --uninstall-extension apility.beautify-blade --force
 code --uninstall-extension isudox.vscode-jetbrains-keybindings --force
 code --uninstall-extension donjayamanne.githistory --force
 scoop uninstall vscode -p
-rm -r -force /vscode/
