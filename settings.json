@@ -88,8 +88,10 @@
     "workbench.editor.enablePreview": false,
 
     "vscode_custom_css.imports": [
-        "file:///C:/vscode/code.css",
-        "file:///C:/vscode/code.js",
+        "CODE_CSS",
+        "CODE_JS",
+//        "file:///C:/vscode/code.css",
+//        "file:///C:/vscode/code.js",
     ],
 
     // editor

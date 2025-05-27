@@ -1,8 +1,14 @@
 #!/bin/bash
 
-pushd /
+pushd "$HOME"
 
-sudo snap install code
+mkdir -p "$HOME/tmp"
+pushd "$HOME/tmp"
+curl -L "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -o code.deb
+sudo DEBIAN_FRONTEND=noninteractive apt install -y ./code.deb
+popd
+rm -rf "$HOME/tmp"
+
 code --install-extension yathink3.carbon-react-color-theme --force
 code --install-extension pkief.material-icon-theme --force
 code --install-extension esbenp.prettier-vscode --force
@@ -12,14 +18,18 @@ code --install-extension isudox.vscode-jetbrains-keybindings --force
 code --install-extension donjayamanne.githistory --force
 
 sudo apt install fonts-firacode
+sudo apt install sd
 
-if [[ ! -d /vscode ]]; then
-    git clone git@github.com:chrishenn/vscode.git
-    cd /vscode
-else
-    cd /vscode
-    git pull
-fi
-cp /vscode/settings.json "$HOME/.config/Code/User/settings.json" -force
-cp /vscode/keybindings.json "$HOME/.config/Code/User/keybindings.json" -force
+sett="$HOME/.config/Code/User/settings.json"
+keyb="$HOME/.config/Code/User/keybindings.json"
+codecss="$HOME/.config/Code/User/code.css"
+codejs="$HOME/.config/Code/User/code.js"
+
+curl -Lo "$sett" "https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/settings.json"
+curl -Lo "$keyb" "https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/keybindings.json"
+curl -Lo "$codecss" "https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/code.css"
+curl -Lo "$codejs" "https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/code.js"
+
+sd 'CODE_CSS' "$codecss" "$sett"
+sd 'CODE_JS' "$codejs" "$sett"
 popd
