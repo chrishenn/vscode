@@ -6,7 +6,7 @@
 
 /* Code canvas top shadow */
 .monaco-editor .scroll-decoration {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75) !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .75) !important;
     top: -6px !important;
 }
 
@@ -17,7 +17,7 @@
 
 /* Side bar */
 .part.sidebar {
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, .25);
+    box-shadow: 0 0 50px rgba(0, 0, 0, .25);
 }
 
 /* File Explorer Selected Item */
@@ -46,7 +46,7 @@
 
 /* File Explorer Item Label */
 .monaco-tree .monaco-tree-row .label-name,
-.monaco-list .monaco-list-row
+.monaco-list .monaco-list-row,
 .monaco-icon-label .label-name {
     font-family: 'Fira Code', monospace !important;
     font-size: 14px !important;
@@ -54,13 +54,13 @@
     color: #FFF !important;
 }
 .explorer-item-edited {
-  font-family: Fira Code !important;
-  font-size: 14px !important;
+    font-family: Fira Code, monospace !important;
+    font-size: 14px !important;
 }
 
 /* Sidebar top shadow */
 .monaco-scrollable-element>.shadow.top {
-    box-shadow: 0px 0px 10px rgba(0,0,0,.75) !important;
+    box-shadow: 0 0 10px rgba(0,0,0,.75) !important;
     top: -3px !important;
 }
 
@@ -90,11 +90,11 @@
 /* Tooltip box style */
 .monaco-editor-hover,
 .monaco-hover {
-    box-shadow: 0px 8px 32px rgba(0,0,0,.45) !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,.45) !important;
     backdrop-filter: blur(3px) !important;
     border-radius: 16px !important;
     border: none !important;
-    outline: 0px !important;
+    outline: 0 !important;
 }
 .monaco-resizable-hover {
     border: none !important;
@@ -115,7 +115,7 @@
 
 /* Search Label */
 .search-label {
-    font-family: 'Fira Code' !important;
+    font-family: 'Fira Code', monospace !important;
     font-size: 14px !important;
     color: #fff;
     display: block;
@@ -142,7 +142,7 @@
 .quick-input-widget {
     transform: translateY(-50%) !important;
     top: 50% !important;
-    box-shadow: 0px 8px 32px rgba(0, 0, 0, .35) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .35) !important;
     padding: 10px 10px 18px 10px !important;
     backdrop-filter: blur(3px) !important;
     border-radius: 20px !important;
@@ -161,7 +161,7 @@
     border-radius: 12px !important;
     padding: 16px !important;
     border: none !important;
-    font-family: "Fira Code" !important;
+    font-family: "Fira Code", monospace !important;
     font-size: 16px !important;
     margin-bottom: 16px !important;
 }

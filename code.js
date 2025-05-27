@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Hide the tree sticky widget
         const treeWidget = document.querySelector(".monaco-tree-sticky-container");
-        treeWidget && (treeWidget.style.opacity = 0);
+        treeWidget && (treeWidget.style.opacity = "0");
     }
 
     // Remove the backdrop blur from the DOM when esc key is pressed.
@@ -85,11 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show the sticky widget
         const widgets = document.querySelectorAll(".sticky-widget");
         widgets.forEach((widget) => {
-            widget.style.opacity = 1;
+            widget.style.opacity = "1";
         });
 
         // Show the tree sticky widget
         const treeWidget = document.querySelector(".monaco-tree-sticky-container");
-        treeWidget && (treeWidget.style.opacity = 1);
+        treeWidget && (treeWidget.style.opacity = "1");
     }
 });

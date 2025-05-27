@@ -20,18 +20,18 @@ code --install-extension RimuruChan.vscode-fix-checksums-next --force
 
 sudo apt install -y fonts-firacode sd
 
-sett="$HOME/.config/Code/User/settings.json"
-keyb="$HOME/.config/Code/User/keybindings.json"
-codecss="$HOME/.config/Code/User/code.css"
-codejs="$HOME/.config/Code/User/code.js"
+repo="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main"
+cfg="$HOME/.config/Code/User"
 
-curl -Lo "$sett" "https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/settings.json"
-curl -Lo "$keyb" "https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/keybindings.json"
-curl -Lo "$codecss" "https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/code.css"
-curl -Lo "$codejs" "https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/code.js"
+mkdir -p "$cfg"
 
-sd 'CODE_CSS' "$codecss" "$sett"
-sd 'CODE_JS' "$codejs" "$sett"
+curl -L "$repo/settings.json" -o "$cfg/settings.json"
+curl -L "$repo/keybindings.json" -o "$cfg/keybindings.json"
+curl -L "$repo/code.css" -o "$cfg/code.css"
+curl -L "$repo/code.js" -o "$cfg/code.js"
+
+sd 'CODE_CSS' "$cfg/code.css" "$cfg/settings.json"
+sd 'CODE_JS' "$cfg/code.js" "$cfg/settings.json"
 
 sudo chown -R $(whoami) "$(which code)"
 sudo chown -R $(whoami) /usr/share/code
