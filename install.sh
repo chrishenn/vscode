@@ -16,9 +16,9 @@ code --install-extension be5invis.vscode-custom-css --force
 code --install-extension apility.beautify-blade --force
 code --install-extension isudox.vscode-jetbrains-keybindings --force
 code --install-extension donjayamanne.githistory --force
+code --install-extension RimuruChan.vscode-fix-checksums-next --force
 
-sudo apt install fonts-firacode
-sudo apt install sd
+sudo apt install -y fonts-firacode sd
 
 sett="$HOME/.config/Code/User/settings.json"
 keyb="$HOME/.config/Code/User/keybindings.json"
@@ -32,4 +32,8 @@ curl -Lo "$codejs" "https://raw.githubusercontent.com/chrishenn/vscode/refs/head
 
 sd 'CODE_CSS' "$codecss" "$sett"
 sd 'CODE_JS' "$codejs" "$sett"
+
+sudo chown -R $(whoami) "$(which code)"
+sudo chown -R $(whoami) /usr/share/code
+
 popd

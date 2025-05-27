@@ -14,31 +14,26 @@
     "security.workspace.trust.enabled": false,
 
     // linux
-    //
     "redhat.telemetry.enabled": false,
     "xml.symbols.maxItemsComputed": 10000,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
     // arduino
-    //
     "arduino.useArduinoCli": true,
     "arduino.path": "",
     "arduino.commandPath": "",
 
     // cmake
-    //
     "cmake.configureOnOpen": false,
     "cmake.showOptionsMovedNotification": false,
 
     // yaml
-    //
     "yaml.customTags": [
         "!secret scalar",
         "!env_var scalar"
     ],
 
     // explorer
-    //
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "explorer.sortOrder": "filesFirst",
@@ -46,13 +41,11 @@
     "workbench.tree.indent": 40,
 
     // git
-    //
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.autofetch": true,
 
     // terminal
-    //
     "terminal.integrated.inheritEnv": false,
     "terminal.integrated.defaultProfile.windows": "PowerShell",
     "terminal.integrated.enableMultiLinePasteWarning": "never",
@@ -65,7 +58,6 @@
     },
 
     // theme
-    //
     "workbench.colorTheme": "Carbon React Color Theme - Pure",
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
@@ -88,12 +80,11 @@
     "workbench.editor.enablePreview": false,
 
     "vscode_custom_css.imports": [
-        "CODE_CSS",
-        "CODE_JS",
+        "file://CODE_CSS",
+        "file://CODE_JS",
     ],
 
     // editor
-    //
     "editor.suggestSelection": "first",
     "editor.wordWrap": "on",
     "editor.largeFileOptimizations": false,
@@ -132,7 +123,6 @@
     },
 
     // settings from glennraya https://github.com/glennraya/vscode-settings-json
-    //
     "window.newWindowDimensions": "inherit",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -179,7 +169,6 @@
     },
 
     // web
-    //
     "emmet.includeLanguages": {
         "blade": "html",
         "vue-html": "html",
@@ -194,7 +183,6 @@
     "php.suggest.basic": false,
 
     // prettier
-    //
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
@@ -235,9 +223,6 @@
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[php]": {
-        // "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
     },
     "editor.tokenColorCustomizations": {
         "textMateRules": [{

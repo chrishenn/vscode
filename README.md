@@ -18,14 +18,17 @@ curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.
 
 Manual steps, not handled by the script:
 
+- vscode > palette > Fix Checksums: Apply
 - vscode > palette > Reload Custom CSS and JS
   - restart vscode
-- vscode > notification "your installation appears to be corrupt" > cog icon > don't show again
-- selection > switch to alt-click for multi-cursor
+- vscode > menu > selection > switch to alt-click for multi-cursor
+
+
 - code "$HOME\scoop\persist\vscode\data\extensions\isudox.vscode-jetbrains-keybindings-0.1.9\package.json"
+- code "$HOME/.vscode/extensions/isudox.vscode-jetbrains-keybindings-0.1.9/package.json"  
   - find ctrl+` > delete hotkey
   - find ctrl+k > delete hotkey
-  - vscode > palette > reload window
+- vscode > palette > reload window
 
 
 
@@ -37,7 +40,7 @@ Manual steps, not handled by the script:
 irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/uninstall.ps1 | iex
 
 # linux/ubuntu, bash
-curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/uninstall.sh | sh
+curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/uninstall.sh | bash
 ```
 
 
