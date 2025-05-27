@@ -13,7 +13,7 @@ security note: you should read scripts before running them
 irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.ps1 | iex
 
 # linux/ubuntu, bash
-curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.sh | sh
+curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.sh | bash
 ```
 
 Manual steps, not handled by the script:

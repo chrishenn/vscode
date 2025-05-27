@@ -90,8 +90,6 @@
     "vscode_custom_css.imports": [
         "CODE_CSS",
         "CODE_JS",
-//        "file:///C:/vscode/code.css",
-//        "file:///C:/vscode/code.js",
     ],
 
     // editor
