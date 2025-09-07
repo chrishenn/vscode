@@ -2,12 +2,9 @@
 
 pushd "$HOME"
 
-mkdir -p "$HOME/tmp"
-pushd "$HOME/tmp"
 curl -L "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -o code.deb
 sudo DEBIAN_FRONTEND=noninteractive apt install -y ./code.deb
-popd
-rm -rf "$HOME/tmp"
+rm code.deb
 
 code --install-extension yathink3.carbon-react-color-theme --force
 code --install-extension pkief.material-icon-theme --force
