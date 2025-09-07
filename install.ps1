@@ -1,15 +1,23 @@
 pushd "$HOME"
 
+$asadmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(
+    [Security.Principal.WindowsBuiltInRole]::Administrator
+)
+
 if ((Get-Command scoop -ErrorAction SilentlyContinue) -eq $null) {
     irm get.scoop.sh -outfile 'scoop.ps1'
-    .\scoop.ps1 -RunAsAdmin | out-null
+    if ($asadmin) {
+        .\scoop.ps1 -RunAsAdmin | out-null
+    } else {
+        .\scoop.ps1 | out-null
+    }
     rm scoop.ps1
 }
 
 scoop bucket add nerd-fonts
 scoop bucket add extras
-scoop install firacode vscode sd
-reg import "$HOME\scoop\apps\vscode\current\install-github-integration.reg"
+scoop install firacode-nf-mono vscode sd
+reg import "$(scoop prefix vscode)\install-github-integration.reg"
 
 code --install-extension yathink3.carbon-react-color-theme --force
 code --install-extension pkief.material-icon-theme --force
@@ -21,9 +29,9 @@ code --install-extension donjayamanne.githistory --force
 code --install-extension RimuruChan.vscode-fix-checksums-next --force
 
 $repo = "https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main"
-$cfg = "$HOME/scoop/apps/vscode/current/data/user-data/User"
+$cfg = "$(scoop prefix vscode)/data/user-data/User"
 
-[void](mkdir -ea 0 "$cfg")
+[void](mkdir -force "$cfg")
 
 curl "$repo/settings.json" -o "$cfg/settings.json"
 curl "$repo/keybindings.json" -o "$cfg/keybindings.json"
