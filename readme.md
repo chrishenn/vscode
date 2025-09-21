@@ -9,15 +9,13 @@ Scripts to install my vscode prefs on {windows, linux}
   </div>
 </p>
 
-
 # Install
 
 - Note: You should read scripts before running them
-- Note: These scripts are for my preferred setup and may have side-effects or incompatibilities that may not work on 
-your system.
-- Note: The 'uninstall' scripts below are not comprehensive, and will leave clutter behind that were installed by the 
-'install' scripts
-
+- Note: These scripts are for my preferred setup and may have side-effects or incompatibilities that may not work on
+  your system.
+- Note: The 'uninstall' scripts below are not comprehensive, and will leave clutter behind that were installed by the
+  'install' scripts
 
 ```
 # windows, powershell
@@ -35,19 +33,16 @@ Required manual steps, not automated by the scripts yet:
 - vscode > menu > selection > switch to alt-click for multi-cursor
 
 - hotkeys: edit the package.json for the installed extension, for the path matching your OS
-  - windows  
+  - windows
     - code "$HOME\scoop\persist\vscode\data\extensions\isudox.vscode-jetbrains-keybindings-0.1.9\package.json"
-  - linux  
-    - code "$HOME/.vscode/extensions/isudox.vscode-jetbrains-keybindings-0.1.9/package.json"  
+  - linux
+    - code "$HOME/.vscode/extensions/isudox.vscode-jetbrains-keybindings-0.1.9/package.json"
   - edits
     - find ctrl+` > delete hotkey def
     - find ctrl+k > delete hotkey def
 - restart vscode
 
-
-
 # Uninstall
-
 
 ```
 # windows, powershell
@@ -56,7 +51,6 @@ irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/uninstall
 # linux/ubuntu, bash
 curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/uninstall.sh | bash
 ```
-
 
 # Credit
 

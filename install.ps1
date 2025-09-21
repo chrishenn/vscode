@@ -36,9 +36,7 @@ $cfg = "$(scoop prefix vscode)/data/user-data/User"
 curl "$repo/settings.json" -o "$cfg/settings.json"
 curl "$repo/keybindings.json" -o "$cfg/keybindings.json"
 curl "$repo/code.css" -o "$cfg/code.css"
-curl "$repo/code.js" -o "$cfg/code.js"
 
 sd 'CODE_CSS' "$cfg/code.css".Replace('\', '/') "$cfg/settings.json"
-sd 'CODE_JS' "$cfg/code.js".Replace('\', '/') "$cfg/settings.json"
 
 popd

@@ -1,36 +1,51 @@
 #!/bin/bash
+set -euxo pipefail
+IFS=$'\n\t'
 
-pushd "$HOME"
+function install_code {
+	curl -L "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -o code.deb
+	sudo DEBIAN_FRONTEND=noninteractive apt install -y ./code.deb
+	rm code.deb
+}
 
-curl -L "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -o code.deb
-sudo DEBIAN_FRONTEND=noninteractive apt install -y ./code.deb
-rm code.deb
+function install_code_extensions {
+	code --install-extension yathink3.carbon-react-color-theme --force
+	code --install-extension pkief.material-icon-theme --force
+	code --install-extension esbenp.prettier-vscode --force
+	code --install-extension be5invis.vscode-custom-css --force
+	code --install-extension apility.beautify-blade --force
+	code --install-extension isudox.vscode-jetbrains-keybindings --force
+	code --install-extension donjayamanne.githistory --force
+	code --install-extension RimuruChan.vscode-fix-checksums-next --force
+}
 
-code --install-extension yathink3.carbon-react-color-theme --force
-code --install-extension pkief.material-icon-theme --force
-code --install-extension esbenp.prettier-vscode --force
-code --install-extension be5invis.vscode-custom-css --force
-code --install-extension apility.beautify-blade --force
-code --install-extension isudox.vscode-jetbrains-keybindings --force
-code --install-extension donjayamanne.githistory --force
-code --install-extension RimuruChan.vscode-fix-checksums-next --force
+function main {
+	pushd "$HOME"
 
-sudo apt install -y fonts-firacode sd
+	if ! type -P code; then
+		install_code
+	fi
+#	install_code_extensions
 
-repo="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main"
-cfg="$HOME/.config/Code/User"
+	if ! type -P sd; then
+		sudo DEBIAN_FRONTEND=noninteractive apt install -y sd
+	fi
+	sudo DEBIAN_FRONTEND=noninteractive apt install -y fonts-firacode
 
-mkdir -p "$cfg"
+	repo="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main"
+	cfg="$HOME/.config/Code/User"
 
-curl -L "$repo/settings.json" -o "$cfg/settings.json"
-curl -L "$repo/keybindings.json" -o "$cfg/keybindings.json"
-curl -L "$repo/code.css" -o "$cfg/code.css"
-curl -L "$repo/code.js" -o "$cfg/code.js"
+	mkdir -p "$cfg"
 
-sd 'CODE_CSS' "$cfg/code.css" "$cfg/settings.json"
-sd 'CODE_JS' "$cfg/code.js" "$cfg/settings.json"
+	curl -L "$repo/settings.json" -o "$cfg/settings.json"
+	curl -L "$repo/keybindings.json" -o "$cfg/keybindings.json"
+	curl -L "$repo/code.css" -o "$cfg/code.css"
 
-sudo chown -R $(whoami) "$(which code)"
-sudo chown -R $(whoami) /usr/share/code
+	sd 'CODE_CSS' "$cfg/code.css" "$cfg/settings.json"
 
-popd
+	sudo chown -R "$(whoami)" /usr/share/code/resources/app/out/vs/code/electron-browser/workbench
+
+	popd
+}
+
+main "$@"
