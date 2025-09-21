@@ -4,7 +4,7 @@ $asadmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIden
     [Security.Principal.WindowsBuiltInRole]::Administrator
 )
 
-if ((Get-Command scoop -ErrorAction SilentlyContinue) -eq $null) {
+if ($null -eq (Get-Command scoop -ErrorAction SilentlyContinue)) {
     irm get.scoop.sh -outfile 'scoop.ps1'
     if ($asadmin) {
         .\scoop.ps1 -RunAsAdmin | out-null

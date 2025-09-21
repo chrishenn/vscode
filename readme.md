@@ -21,7 +21,7 @@ Scripts to install my vscode prefs on {windows, linux}
 # windows, powershell
 irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/script/install.ps1 | iex
 
-# linux/ubuntu, bash
+# ubuntu/debian (requires apt), bash
 curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/script/install.sh | bash
 ```
 
@@ -48,7 +48,7 @@ Required manual steps, not automated by the scripts yet:
 # windows, powershell
 irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/script/uninstall.ps1 | iex
 
-# linux/ubuntu, bash
+# ubuntu/debian (requires apt), bash
 curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/script/uninstall.sh | bash
 ```
 

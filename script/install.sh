@@ -31,7 +31,9 @@ function main {
 	if ! type -P sd; then
 		sudo DEBIAN_FRONTEND=noninteractive apt install -y sd
 	fi
-	sudo DEBIAN_FRONTEND=noninteractive apt install -y fonts-firacode
+	if ! dpkg-query -l fonts-firacode; then
+	  sudo DEBIAN_FRONTEND=noninteractive apt install -y fonts-firacode
+  fi
 
 	repo="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main"
 	cfg="$HOME/.config/Code/User"
