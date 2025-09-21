@@ -33,9 +33,9 @@ $cfg = "$(scoop prefix vscode)/data/user-data/User"
 
 [void](mkdir -force "$cfg")
 
-curl "$repo/settings.json" -o "$cfg/settings.json"
-curl "$repo/keybindings.json" -o "$cfg/keybindings.json"
-curl "$repo/code.css" -o "$cfg/code.css"
+curl "$repo/src/settings.json" -o "$cfg/settings.json"
+curl "$repo/src/keybindings.json" -o "$cfg/keybindings.json"
+curl "$repo/src/code.css" -o "$cfg/code.css"
 
 sd 'CODE_CSS' "$cfg/code.css".Replace('\', '/') "$cfg/settings.json"
 

@@ -4,8 +4,8 @@ Scripts to install my vscode prefs on {windows, linux}
 
 <p style="text-align: center;">
   <div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/img.png" alt="window" width="400">
-    <img src="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/img1.png" alt="blur" width="400">
+    <img src="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/doc/img.png" alt="window" width="400">
+    <img src="https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/doc/img1.png" alt="blur" width="400">
   </div>
 </p>
 
@@ -19,10 +19,10 @@ Scripts to install my vscode prefs on {windows, linux}
 
 ```
 # windows, powershell
-irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/script/install.ps1 | iex
 
 # linux/ubuntu, bash
-curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/install.sh | bash
+curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/script/install.sh | bash
 ```
 
 Required manual steps, not automated by the scripts yet:
@@ -46,10 +46,10 @@ Required manual steps, not automated by the scripts yet:
 
 ```
 # windows, powershell
-irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/uninstall.ps1 | iex
+irm https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/script/uninstall.ps1 | iex
 
 # linux/ubuntu, bash
-curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/uninstall.sh | bash
+curl https://raw.githubusercontent.com/chrishenn/vscode/refs/heads/main/script/uninstall.sh | bash
 ```
 
 # Credit
