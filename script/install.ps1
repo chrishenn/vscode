@@ -36,7 +36,10 @@ $cfg = "$(scoop prefix vscode)/data/user-data/User"
 curl "$repo/src/settings.json" -o "$cfg/settings.json"
 curl "$repo/src/keybindings.json" -o "$cfg/keybindings.json"
 curl "$repo/src/code.css" -o "$cfg/code.css"
-
 sd 'CODE_CSS' "$cfg/code.css".Replace('\', '/') "$cfg/settings.json"
+
+$cfg = (resolve-path "$HOME\scoop\persist\vscode\data\extensions\isudox.vscode-jetbrains-keybindings-*\package.json").path
+yq -iP 'del(.contributes.keybindings[] | select(.key == "ctrl+`"))' $cfg -o json
+yq -iP 'del(.contributes.keybindings[] | select(.key == "ctrl+k"))' $cfg -o json
 
 popd

@@ -1,1 +1,1 @@
-sudo apt purge code -y
+sudo apt purge -y code

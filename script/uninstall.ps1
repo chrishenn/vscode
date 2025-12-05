@@ -1,1 +1,1 @@
-scoop uninstall vscode -p
+scoop uninstall vscode
